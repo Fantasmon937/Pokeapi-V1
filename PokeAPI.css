@@ -1,0 +1,152 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7c1cfff2-db8d-44cd-8a13-cb2a4162fae6/dd2zouo-047f7b3f-b895-43ac-82a4-abb6ca12c52a.png/v1/fill/w_1192,h_670,q_70,strp/pokemon_wallpaper___poke_ball_theme_by_0trinima0_dd2zouo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE2MCIsInBhdGgiOiJcL2ZcLzdjMWNmZmYyLWRiOGQtNDRjZC04YTEzLWNiMmE0MTYyZmFlNlwvZGQyem91by0wNDdmN2IzZi1iODk1LTQzYWMtODJhNC1hYmI2Y2ExMmM1MmEucG5nIiwid2lkdGgiOiI8PTM4NDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.XS1rQqBUlisxOaqqd4gkDEhK68OInxjd-LRQ46yArEI");
+}
+
+#content_box{
+    width: 800px;
+    height: 600px;
+    border: 10px solid lightblue;
+    background-color: #25630e;
+}
+
+#views{
+    width: 780px;
+    height: 50px;
+    background-color: beige;
+
+    display: flex;
+}
+
+.view_item{
+    border: 1px black;
+    border-radius: 10px;
+    background-color: lightblue;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+#pokemon_info{
+    margin-top: 5px;
+    margin-left: 0px;
+    width: 780px;
+    height: 260px;
+    
+}
+
+#pokemon_types{
+    margin-top: 2%;
+    margin-left: -15%;
+}
+
+.type_box{
+    padding: 3px;
+    margin: 6px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: aliceblue;
+    font-size: x-large;
+}
+
+.grass{
+    background-color: green;
+    color: white;
+}
+
+.normal{
+    background-color: lightslategray;
+    color: white;
+}
+
+.rock{
+    background-color: saddlebrown;
+    color: white;
+}
+
+.psychic{
+    background-color: magenta;
+    color: white;
+}
+
+.ground{
+    background-color: orange;
+    color: white;
+}
+
+.water{
+    background-color: blue;
+    color: white;
+}
+
+.fire{
+    background-color: orange;
+    color: white;
+}
+
+.fairy{
+    background-color: pink;
+    color: white;
+}
+
+.fighting{
+    background-color: brown;
+    color: white;
+}
+
+.poison{
+    background-color: blueviolet;
+    color: white;
+}
+
+.flying{
+    background-color: lightskyblue;
+    color: white;
+}
+
+.ghost{
+    background-color: purple;
+    color: white;
+}
+
+.psychic{
+    background-color: violet;
+    color: white;
+}
+
+.steel{
+    background-color: gray;
+    color: white;
+}
+
+.electric{
+    background-color: yellow;
+    color: white;
+}
+
+.bug{
+    background-color: lime;
+    color: white;
+}
+
+.ice{
+    background-color: lightblue;
+    color: white;
+}
+
+.dragon{
+    background-color: mediumpurple;
+    color: white;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+#pokemon_description{
+    margin-top: 2%;
+    width: 780px;
+    height: 200px;
+    background-color: #d0bc97;
+}
