@@ -31,7 +31,7 @@ async function getPokemon(num) {
 
   pokemonData = pokemonData["flavor_text_entries"];
   
-  pokemonData.forEach(entry => {
+  pokemonData.forEach(entry => {//Search for pokemon description on english
     if (entry["language"]["name"] == "en") {
         pokemonData = entry;
         return;
@@ -40,7 +40,7 @@ async function getPokemon(num) {
 
   pokemonDescription = pokemonData["flavor_text"]; //Gets the description
 
-  pokedexInfo = {
+  pokedexInfo = {//Creates a JSON with all the nescesary information
     id: pokemonID,
     name: pokemonName,
     sprite: pokemonImage,
@@ -51,10 +51,10 @@ async function getPokemon(num) {
   };
 }
 
-async function updatePokemon() {
-  await getPokemon(getRandomInt(pokemonCount));
+async function updatePokemon() {//Update User inteface
+  await getPokemon(getRandomInt(pokemonCount));//Max pokemon ID 
   console.log(pokedexInfo);
-  document.getElementById("pokemon_img").src = pokedexInfo["sprite"]
+  document.getElementById("pokemon_img").src = pokedexInfo["sprite"]//Update Pokemon Sprite
 
   //Clear previous Pokemon
   let pokemonTypes = document.getElementById("pokemon_types");
@@ -62,7 +62,7 @@ async function updatePokemon() {
     pokemonTypes.firstChild.remove();
   }
 
-  //Update type data
+  //Update pokemon type data
   let types = pokedexInfo["types"];
   types.forEach(element => {
     let type = document.createElement("span");
@@ -72,17 +72,20 @@ async function updatePokemon() {
     pokemonTypes.append(type);
   });
 
-  document.getElementById("pokemon_description").innerText = pokedexInfo["description"].toString().replace(/[\r\n\f]/gm, ' ');
-  document.getElementById("pokemon_id").innerText = "° " + pokedexInfo["id"].toString();
-  document.getElementById("pokemon_name").innerText = pokedexInfo["name"].charAt(0).toUpperCase()+ pokedexInfo["name"].slice(1);
-  document.getElementById("pokemon_weight").innerText = "Weight: \t\t" + (pokedexInfo["weight"]/10).toString() + "Kg";
-  document.getElementById("pokemon_height").innerText = "Height: \t\t" + (pokedexInfo["height"]/10).toString() + "m";
+  //Update other information
+  document.getElementById("pokemon_description").innerText = pokedexInfo["description"].toString().replace(/[\r\n\f]/gm, ' ');//Description
+  document.getElementById("pokemon_id").innerText = "° " + pokedexInfo["id"].toString();//ID
+  document.getElementById("pokemon_name").innerText = pokedexInfo["name"].charAt(0).toUpperCase()+ pokedexInfo["name"].slice(1);//Name
+  document.getElementById("pokemon_weight").innerText = "Weight: \t\t" + (pokedexInfo["weight"]/10).toString() + "Kg";//Weight in hectograms
+  document.getElementById("pokemon_height").innerText = "Height: \t\t" + (pokedexInfo["height"]/10).toString() + "m";//Height in decagrams
 }
 
+//Returns a random number between 1 and the max value
 function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
 }
 
+//Waits time in milliseconds
 const sleep = async (milliseconds) => {
     await new Promise(resolve => {
         return setTimeout(resolve, milliseconds)
